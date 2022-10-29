@@ -26,7 +26,7 @@ const CardData = [
         path:"/array",
         image:Array,
         title: 'Array',
-        desc:"Array methods,sorting, iteration, const "
+        desc:"Array methods,sorting etc.. "
     },
     {
         path:"/loop",
