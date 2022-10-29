@@ -1,0 +1,193 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+   
+}
+
+
+
+//Banner-section start//
+
+.banner-section{
+    background-image: linear-gradient(to left, rgba(143, 193, 224, 0.623),  rgba(45, 86, 112, 0.795), rgba(42, 73, 94, 0.925)), url("../images/Banner/section1.png" );
+    background-size: cover;
+    height: 85vh;
+    background-position: center;
+    overflow: hidden;
+  }
+
+.banner-section{
+    .d-flex{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    
+    .col-6{
+        flex: 0 0 50%;
+        width: 50%;
+        display: flex;
+    }
+    
+h1{
+    font-size: 52px;
+    font-weight: 600;
+    color: white;
+    line-height: 66px;
+    margin-bottom: 10px;
+}
+
+.more{
+    color: white;
+    font-size: 22px;
+    line-height: 23px;
+}
+.col-wrapper{
+    padding-top: 170px;
+}
+.js-img{
+    text-align: right;
+    background-image: url("../images/Banner/js.png") ;
+    background-repeat: no-repeat;
+    background-size: 60% ;
+    background-position: right center;
+    height: 100%;
+    width: 100% ;
+}
+
+}
+//Banner-section end//
+
+//Card-section start//
+
+.card-section{
+    background-color: rgba(34,34,34,255);
+    background-image: linear-gradient(to left, rgba(143, 193, 224, 0.623),  rgba(45, 86, 112, 0.795), rgba(42, 73, 94, 0.925));
+}
+
+.card-wrapper{
+
+    padding-top: 50px;
+
+    h2{
+        font-size: 36px;
+        line-height: 39px;
+        color: #ffff;
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+
+    .row{
+        background-color: rgb(118, 168, 212);
+        justify-content: space-between;
+        .card{
+          flex:  0 0 32.32%;
+          width: 32.32%;
+            max-height: 300px;
+            height: 250px;
+            border: 2px solid yellow;
+            border-radius: 20px;
+
+        }
+    }
+
+}
+
+@media (max-width:1200px){
+   
+    .banner-section{
+        h1{
+            font-size: 44px;
+            line-height: 47px;
+        }
+        .more{
+            font-size: 18px;
+            line-height: 21px;
+        }
+        .col-wrapper{
+            padding-top: 120px;
+        }
+    }
+}
+
+@media (max-width:992px){
+    .banner-section{
+        h1{
+            font-size: 32px;
+            line-height: 35px;
+            margin-bottom: 7px;
+        }
+        .more{
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .col-wrapper{
+            padding-top: 135px;
+        }
+    }
+}
+
+@media (max-width:768px){
+
+    .container{
+        width: 90%;
+    } 
+
+
+    .banner-section{
+        h1{
+            font-size: 28px;
+            line-height: 31px;
+            margin-bottom: 7px;
+        }
+        .more{
+            font-size: 14px;
+            line-height: 17px;
+        }
+      
+    }
+}
+@media (max-width:480px){
+
+    .container{
+        width: 90%;
+    } 
+    .banner-section {
+        background-size: cover;
+        height: 80vh;
+        background-image: linear-gradient(to top, rgba(44, 138, 197, 0.459),  rgba(39, 81, 105, 0.795), rgba(26, 70, 99, 0.925));
+
+    }
+   
+    
+    .banner-section{
+    .d-flex{
+        flex-direction: column-reverse;
+    }
+
+        .col-6{
+            width: 100%;
+        }
+        h1{
+            font-size: 26px;
+            line-height: 29px;
+            margin-bottom: 7px;
+        }
+
+        .more{
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .col-wrapper{
+            padding-top: 50px;
+        }
+        .js-img{
+            background-size: 180px ;
+            background-position: center center;
+            margin-top: 40px;
+    
+        }
+    }
+}
