@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CardData from "./data/CardData";
 
@@ -14,13 +15,13 @@ const Cards = (props) => {
 
             {CardData.map((value, index ) => {
               return <>
-                <a herf="" className="card" key={index} >
+                <Link  className="card" to={value.path} key={index} >
                <img src={value.image} className="card-img"/>
                   <div className="card-intro">
                     <h3>{value.title}</h3>
                     <p>{value.desc}</p>
                   </div>
-                </a>
+                </Link>
        
               </>;
             })}

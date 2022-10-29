@@ -29,6 +29,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .banner-section h1 {
   font-size: 52px;
@@ -42,9 +45,6 @@
   color: white;
   font-size: 22px;
   line-height: 23px;
-}
-.banner-section .col-wrapper {
-  padding-top: 170px;
 }
 .banner-section .js-img {
   text-align: right;
@@ -99,21 +99,23 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+          box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
 }
 .card-wrapper .row .card-intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  min-height: 80px;
+  max-height: 100px;
   text-align: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 10px;
+  padding: 14px 10px;
   background-color: rgba(76, 145, 167, 0.2);
   border-radius: 0px 0px 10px 10px;
 }
@@ -136,6 +138,10 @@
   height: 100%;
   min-height: 200px;
 }
+.card-wrapper .row .card:hover {
+  -webkit-transform: scale(1.25) rotate(2deg);
+          transform: scale(1.25) rotate(2deg);
+}
 
 @media (max-width: 1200px) {
   .banner-section h1 {
@@ -146,8 +152,9 @@
     font-size: 18px;
     line-height: 21px;
   }
-  .banner-section .col-wrapper {
-    padding-top: 120px;
+
+  .card-section .container {
+    width: 90%;
   }
 }
 @media (max-width: 992px) {
@@ -160,8 +167,28 @@
     font-size: 16px;
     line-height: 19px;
   }
-  .banner-section .col-wrapper {
-    padding-top: 135px;
+
+  .card-wrapper h2 {
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .card-wrapper .row .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48.5%;
+            flex: 0 0 48.5%;
+    width: 48.5%;
+    max-height: 270px;
+    min-height: 270px;
+  }
+  .card-wrapper .row h3 {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 6px;
+  }
+  .card-wrapper .row p {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 2px;
   }
 }
 @media (max-width: 768px) {
@@ -178,6 +205,22 @@
     font-size: 14px;
     line-height: 17px;
   }
+
+  .card-wrapper .row .card {
+    max-height: 200px;
+    min-height: 230px;
+  }
+  .card-wrapper .row .card-img {
+    min-height: 145px;
+  }
+  .card-wrapper .row h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .card-wrapper .row p {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 @media (max-width: 480px) {
   .container {
@@ -187,8 +230,8 @@
   .banner-section {
     background-size: cover;
     height: 80vh;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 138, 197, 0.459)), color-stop(rgba(39, 81, 105, 0.795)), to(rgba(26, 70, 99, 0.925)));
-    background-image: linear-gradient(to top, rgba(44, 138, 197, 0.459), rgba(39, 81, 105, 0.795), rgba(26, 70, 99, 0.925));
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 138, 197, 0.459)), color-stop(rgba(45, 93, 121, 0.699)), to(rgba(57, 107, 141, 0.76)));
+    background-image: linear-gradient(to top, rgba(44, 138, 197, 0.459), rgba(45, 93, 121, 0.699), rgba(57, 107, 141, 0.76));
   }
 
   .banner-section .d-flex {
@@ -209,12 +252,33 @@
     font-size: 14px;
     line-height: 17px;
   }
-  .banner-section .col-wrapper {
-    padding-top: 50px;
-  }
   .banner-section .js-img {
     background-size: 180px;
     background-position: center center;
     margin-top: 40px;
+  }
+
+  .card-section {
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 138, 197, 0.432)), color-stop(rgba(39, 81, 105, 0.795)), to(rgba(26, 70, 99, 0.925)));
+    background-image: linear-gradient(to bottom, rgba(44, 138, 197, 0.432), rgba(39, 81, 105, 0.795), rgba(26, 70, 99, 0.925));
+  }
+  .card-section .container {
+    width: 100%;
+  }
+
+  .card-wrapper .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-wrapper .row .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 280px;
+            flex: 0 0 280px;
+    width: 280px;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
