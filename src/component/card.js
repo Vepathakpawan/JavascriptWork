@@ -12,14 +12,15 @@ const Cards = (props) => {
             <div className="row card-layout">
   
 
-            {CardData.map((value, index) => {
+            {CardData.map((value, index ) => {
               return <>
-                <div className=" card" key={index}>
+                <a herf="" className="card" key={index} >
+               <img src={value.image} className="card-img"/>
                   <div className="card-intro">
                     <h3>{value.title}</h3>
                     <p>{value.desc}</p>
                   </div>
-                </div>
+                </a>
        
               </>;
             })}
