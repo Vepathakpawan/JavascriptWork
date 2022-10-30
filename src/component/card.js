@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import CardData from "./data/CardData";
 
 const Cards = (props) => {
+
+  const [noOfElement, setnoOfElement]= useState(6);
+  const showMore = () =>{
+    setnoOfElement(noOfElement + noOfElement);
+  }
+
+  const slice = CardData.slice(0,noOfElement);
+
   return (
     <>
       <div className="card-section">
@@ -13,19 +21,22 @@ const Cards = (props) => {
             <div className="row card-layout">
   
 
-            {CardData.map((value, index ) => {
+            {slice.map((value, index ) => {
               return <>
                 <Link  className="card" to={value.path} key={index} >
                <img src={value.image} className="card-img"/>
                   <div className="card-intro">
-                    <h3>{value.title}</h3>
-                    <p>{value.desc}</p>
+                    <h3 className="hv">{value.title}</h3>
+                    <p className="hv">{value.desc}</p>
                   </div>
                 </Link>
        
               </>;
             })}
+
           </div>
+          <button className="btn show-more" onClick ={showMore}>  Show more</button>
+
         </div>
         </div>
       </div>

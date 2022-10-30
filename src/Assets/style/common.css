@@ -12,7 +12,6 @@
   background-position: center;
   overflow: hidden;
 }
-
 .banner-section .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,6 +76,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
 }
 .card-wrapper .row .card {
   -webkit-box-flex: 0;
@@ -90,14 +90,7 @@
   margin-bottom: 25px;
   background: transparent;
   padding: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   cursor: pointer;
-  position: relative;
   overflow: hidden;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
           box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -141,6 +134,23 @@
 .card-wrapper .row .card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+.card-wrapper .row .card:hover .hv {
+  color: rgb(130, 209, 219);
+}
+
+.show-more {
+  margin: 0 auto;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  width: 200px;
+  display: block;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+.show-more:hover {
+  color: rgb(190, 229, 236);
 }
 
 @media (max-width: 1200px) {
@@ -196,9 +206,12 @@
     width: 90%;
   }
 
+  .banner-section {
+    height: 65vh;
+  }
   .banner-section h1 {
-    font-size: 28px;
-    line-height: 31px;
+    font-size: 32px;
+    line-height: 35px;
     margin-bottom: 7px;
   }
   .banner-section .more {
@@ -211,7 +224,7 @@
     min-height: 230px;
   }
   .card-wrapper .row .card-img {
-    min-height: 145px;
+    min-height: 165px;
   }
   .card-wrapper .row h3 {
     font-size: 16px;
@@ -229,11 +242,10 @@
 
   .banner-section {
     background-size: cover;
-    height: 80vh;
+    height: 70vh;
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 138, 197, 0.459)), color-stop(rgba(45, 93, 121, 0.699)), to(rgba(57, 107, 141, 0.76)));
     background-image: linear-gradient(to top, rgba(44, 138, 197, 0.459), rgba(45, 93, 121, 0.699), rgba(57, 107, 141, 0.76));
   }
-
   .banner-section .d-flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -242,6 +254,10 @@
   }
   .banner-section .col-6 {
     width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
   .banner-section h1 {
     font-size: 26px;
