@@ -87,9 +87,10 @@
   .row {
     justify-content: space-between;
     margin-bottom: 20px;
+    display: flex;
     .card {
-      flex: 0 0 31.00%;
-      width: 31.00%;
+      flex: 0 0 300px;
+      width: 300px;
       max-height: 300px;
       min-height: 270px;
       border: none;

@@ -77,12 +77,18 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slick-list{
+  margin:30px 0px  20px 50px;
 }
 .card-wrapper .row .card {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 31%;
-          flex: 0 0 31%;
-  width: 31%;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  width: 300px;
   max-height: 300px;
   min-height: 270px;
   border: none;
@@ -96,6 +102,12 @@
           box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+}
+.slick-next {
+  right: 0px;
+}
+.slick-prev {
+   left: 0px; 
 }
 .card-wrapper .row .card-intro {
   display: -webkit-box;
@@ -164,7 +176,7 @@
   }
 
   .card-section .container {
-    width: 70%;
+    width: 90%;
   }
 }
 @media (max-width: 992px) {
@@ -177,21 +189,27 @@
     font-size: 16px;
     line-height: 19px;
   }
+  .slick-list{
+    margin:40px 0px  20px 20px;
+  }
+  .card-wrapper .row .card-img {
+  
+    min-height: 186px;
+}
 
   .card-wrapper h2 {
     font-size: 26px;
     line-height: 29px;
   }
   .card-wrapper .row .card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 48.5%;
-            flex: 0 0 48.5%;
-    width: 48.5%;
-    max-height: 270px;
-    min-height: 270px;
+            flex: 0 0 250px;
+    width: 250px;
+    max-height: 260px;
+    margin: 0 auto;
+    min-height: 260px;
   }
   .card-wrapper .row h3 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 21px;
     margin-bottom: 6px;
   }
@@ -205,7 +223,9 @@
   .container {
     width: 90%;
   }
-
+  .slick-list{
+    margin:0px 0px  0px 0px;
+  }
   .banner-section {
     height: 65vh;
   }
@@ -218,13 +238,17 @@
     font-size: 14px;
     line-height: 17px;
   }
+  .card-wrapper .row{
+    overflow: hidden;
+  }
 
   .card-wrapper .row .card {
     max-height: 200px;
     min-height: 230px;
+
   }
   .card-wrapper .row .card-img {
-    min-height: 165px;
+    height: 165px;
   }
   .card-wrapper .row h3 {
     font-size: 16px;
@@ -293,6 +317,7 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 0 280px;
             flex: 0 0 280px;
+            min-height: 255px;
     width: 280px;
     margin: 0 auto;
     margin-bottom: 20px;
