@@ -2,9 +2,12 @@ import React from "react";
 import Cards from "./card";
 import CardData from "./data/CardData";
 
+
+
 function HomePage(){
 
     return(
+        
         <>
         <div className="home-page">
             <div className="banner-section">
@@ -23,10 +26,15 @@ function HomePage(){
                     </div>
                 </div>
             </div>
+            
+            
             <Cards details={CardData}> </Cards>
+           
         </div>
         </>
+    
     )
+  
 };
 
 export default HomePage;

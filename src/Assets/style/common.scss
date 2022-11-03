@@ -6,6 +6,8 @@
 
 //Banner-section start//
 
+
+
 .banner-section {
   background-image: linear-gradient(
       to left,
@@ -18,9 +20,6 @@
   height: 85vh;
   background-position: center;
   overflow: hidden;
-}
-
-.banner-section {
   .d-flex {
     display: flex;
     flex-wrap: wrap;
@@ -87,9 +86,11 @@
 
   .row {
     justify-content: space-between;
+    margin-bottom: 20px;
+    display: flex;
     .card {
-      flex: 0 0 31.00%;
-      width: 31.00%;
+      flex: 0 0 300px;
+      width: 300px;
       max-height: 300px;
       min-height: 270px;
       border: none;
@@ -97,10 +98,7 @@
       margin-bottom: 25px;
       background: transparent;
       padding: 0px;
-      display: flex;
-      justify-content: flex-end;
       cursor: pointer;
-      position: relative;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
       transition: all ease-in-out .3s;
@@ -130,6 +128,7 @@
       margin-bottom: 5px;
       color: rgb(255, 255, 255);
     }
+  
 
     .card-img {
       width: 100%;
@@ -141,8 +140,26 @@
     .card:hover {
       transform: scale(1.1) ;
     }
+
+    .card:hover .hv{
+      color: rgb(130, 209, 219);
+    }
   }
 }
+
+.show-more{
+  margin: 0 auto;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  width: 200px;
+  display: block;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.show-more:hover{
+  color: rgb(190, 229, 236);
+}
+
 
 @media (max-width: 1200px) {
   .banner-section {
@@ -164,6 +181,7 @@
 
 @media (max-width: 992px) {
   .banner-section {
+   
     h1 {
       font-size: 32px;
       line-height: 35px;
@@ -208,9 +226,10 @@
   }
 
   .banner-section {
+    height: 65vh;
     h1 {
-      font-size: 28px;
-      line-height: 31px;
+      font-size: 32px;
+      line-height: 35px;
       margin-bottom: 7px;
     }
     .more {
@@ -226,7 +245,7 @@
         min-height: 230px;
       }
       .card-img {
-        min-height: 145px;
+        min-height: 165px;
       }
       h3 {
         font-size: 16px;
@@ -243,24 +262,24 @@
   .container {
     width: 90%;
   }
+
   .banner-section {
     background-size: cover;
-    height: 80vh;
+    height: 70vh;
     background-image: linear-gradient(
       to top,
       rgba(44, 138, 197, 0.459),
       rgba(45, 93, 121, 0.699),
       rgba(57, 107, 141, 0.76)
     );
-  }
-
-  .banner-section {
     .d-flex {
       flex-direction: column-reverse;
     }
 
     .col-6 {
       width: 100%;
+      justify-content: center;
+      text-align: center;
     }
     h1 {
       font-size: 26px;
